@@ -3,6 +3,7 @@ import * as BooksAPI from './BooksAPI';
 import SingleBook from './SingleBook';
 import { Link } from 'react-router-dom';
 
+
 class SearchPage extends Component {
 	
 	state = {
@@ -19,13 +20,13 @@ class SearchPage extends Component {
 
 	showBooks = (query) => {
 		if (query) {
-		BooksAPI.search(query).then((foundBooks) => {
-			if (foundBooks.error) {
-				this.setState({ foundBooks: [] })
-			}
-			else {
-			this.setState({ foundBooks: foundBooks });
-			}
+            BooksAPI.search(query).then((foundBooks) => {
+                if (foundBooks.error) {
+                    this.setState({ foundBooks: [] })
+                }
+                else {
+                this.setState({ foundBooks: foundBooks });
+                }
 		})}
 		else {
 			this.setState({ foundBooks: [] })
@@ -35,6 +36,7 @@ class SearchPage extends Component {
 	render() {
         return (
             <div className="search-books">
+
 				<div className="search-books-bar">					
 					<Link className="close-search" to='/'>Close</Link>                	
 					
@@ -74,8 +76,8 @@ class SearchPage extends Component {
 										book={foundBooks}					
 										changeShelf={this.props.changeShelf}
 										defaultShelf={shelf}
-							/>
-							</li>
+							        />
+							    </li>
 							)
 						})}
 					</ol>
