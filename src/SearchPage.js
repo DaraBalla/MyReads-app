@@ -50,7 +50,7 @@ class SearchPage extends Component {
                     		
 						<input 
 							type="text" 
-							placeholder="Search by title or author"
+							placeholder="Which one would you like to read next? :)"
 							value={this.state.query}
 							onChange={(event)=>this.updateQuery(event.target.value)}
 						/>

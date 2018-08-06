@@ -12,13 +12,13 @@ body, .app {
 
 .list-books-title {
   padding: 10px 0;
-  background: #2e7c31;
+  background: #f7be06;
   text-align: center;
 }
 .list-books-title h1 {
-  font-weight: 400;
+  font-weight: 600;
   margin: 0;
-  color: white;
+  color: black;
 }
 
 .list-books-content {
@@ -37,7 +37,9 @@ body, .app {
 }
 
 .bookshelf-title {
+  background-image: linear-gradient(to right, #f7be06 10%, white 90%);
   border-bottom: 1px solid #dedede;
+  padding-left: 20px;
 }
 .bookshelf-books {
   text-align: center;
