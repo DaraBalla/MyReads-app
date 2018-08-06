@@ -18,7 +18,10 @@ class BooksPage extends Component {
                         this.props.books
                         .filter(book => book.shelf === 'currentlyReading')
                         .map(book => (<li key={book.id}>   
-                          <SingleBook book={book}/>
+                          <SingleBook 
+                            book={book}
+                            changeShelf={this.props.changeShelf}
+                            defaultShelf='currentlyReading'/>
                         </li>))
                       }
                     </ol>
@@ -32,7 +35,11 @@ class BooksPage extends Component {
                         this.props.books
                         .filter(book => book.shelf === 'wantToRead')
                         .map(book => (<li key={book.id}>   
-                          <SingleBook book={book}/>
+                          <SingleBook 
+                            book={book}
+                            changeShelf={this.props.changeShelf}
+                            defaultShelf='wantToRead'
+                            />
                         </li>))
                       }
                     </ol>
@@ -46,7 +53,11 @@ class BooksPage extends Component {
                         this.props.books
                         .filter(book => book.shelf === 'read')
                         .map(book => (<li key={book.id}>   
-                          <SingleBook book={book}/>
+                          <SingleBook 
+                            book={book}
+                            changeShelf={this.props.changeShelf}
+                            defaultShelf='read'
+                            />
                         </li>))
                       }
                     </ol>
